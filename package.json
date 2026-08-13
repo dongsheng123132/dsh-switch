@@ -1,0 +1,58 @@
+{
+  "name": "dsh-switch",
+  "version": "0.1.0",
+  "description": "Evidence-first model control plane for DeepSeek Harness",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./probe": "./lib/probe.mjs"
+  },
+  "bin": {
+    "dsh-switch": "./bin/dsh-switch.mjs"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "bin/",
+    "cordis.patch.yml",
+    "providers.example.json",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node --test test/probe.test.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke:plugin": "node test/plugin-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongsheng123132/dsh-switch.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "model-switch",
+    "provider-health",
+    "model-routing"
+  ]
+}

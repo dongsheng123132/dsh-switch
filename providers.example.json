@@ -1,0 +1,18 @@
+{
+  "providers": [
+    {
+      "id": "deepseek-official",
+      "baseURL": "https://api.deepseek.com/v1",
+      "apiKeyEnv": "DEEPSEEK_API_KEY",
+      "modelsPath": "/models",
+      "timeoutMs": 5000
+    },
+    {
+      "id": "local-vllm",
+      "baseURL": "http://127.0.0.1:8000/v1",
+      "modelsPath": "/models",
+      "timeoutMs": 1500
+    }
+  ]
+}
+
