@@ -1,6 +1,6 @@
 {
   "name": "dsh-switch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Evidence-first model control plane for DeepSeek Harness",
   "license": "MIT",
   "type": "module",
@@ -25,6 +25,15 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.1.2-alpha.4",
+      "node": ">=22",
+      "dshReleases": {
+        "0.1.2-alpha.4": "compatible",
+        "0.1.2-alpha.5": "compatible",
+        "0.1.2-rc.1": "compatible"
+      }
     }
   },
   "peerDependencies": {
